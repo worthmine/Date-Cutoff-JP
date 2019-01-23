@@ -51,6 +51,8 @@ before 'late' => sub {
     return super();
 };
 
+__PACKAGE__->meta->make_immutable;
+
 sub calc_date {
     my $self = shift;
     my $until = shift if @_;
