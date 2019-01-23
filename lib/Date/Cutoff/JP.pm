@@ -16,14 +16,40 @@ use warnings;
 
 our $VERSION = "0.01";
 
+use Carp;
 use Time::Seconds;
 use Time::Piece;
 my $tp = Time::Piece->new();
 
-use Class::Accessor qw(antlers);
+use Moose;
 has cutoff => ( is => 'rw', isa => 'Num', default => 0 );
-has late    => ( is => 'rw', isa => 'Num', default => 1 );
 has payday => ( is => 'rw', isa => 'Num', default => 0 );
+has late    => ( is => 'rw', isa => 'Num', default => 1 );
+
+before 'cutoff' => sub {
+    my $self = shift;
+    my $value = shift;
+    return super() unless defined $value;
+    croak "unvalid cutoff was set: $value" if $value < 0 or 31 < $value;
+    return super();
+};
+
+before 'payday' => sub {
+    my $self = shift;
+    my $value = shift;
+    return super() unless defined $value;
+    croak "unvalid payday was set: $value" if $value < 0 or 31 < $value;
+    croak "payday must be after cuttoff" if $value < $self->cutoff and $self->late == 0;
+    return super();
+};
+
+before 'late' => sub {
+    my $self = shift;
+    my $value = shift;
+    return super() unless defined $value;
+    croak "unvalid lateness was set: $value" if $value < 0 or 2 < $value;
+    return super();
+};
 
 sub calc_date {
     my $self = shift;
@@ -67,8 +93,6 @@ __END__
 
 =encoding utf-8
 
-=for html <a href="https://travis-ci.com/worthmine/Date-Cutoff-JP"><img src="https://travis-ci.com/worthmine/Date-Cutoff-JP.svg?branch=master"></a>
- 
 =head1 NAME
 
 Date::CutOff::JP - Get the day cutoff and payday for in Japanese timezone
@@ -85,8 +109,23 @@ Date::CutOff::JP - Get the day cutoff and payday for in Japanese timezone
 =head1 DESCRIPTION
 
 Date::CutOff::JP provides how to calculate the day cutoff and the payday from Japanese calender.
+
 you can calculate the weekday for cutoff and paying without holiday in Japan.
  
+=head2 Methods
+ 
+=head3 cutoff
+ 
+get/set the day cutoff in every months. 0 means the end of the month.
+
+=head3 payday
+ 
+get/set the payday in every months. 0 means the end of the month.
+ 
+=head3 late
+ 
+get/set the lateness. 0 means the cutoff and payday is at same month.
+
 =head1 BUGS
 
 Because of dependency: L<Date::Japanese::Holiday>
@@ -115,4 +154,3 @@ it under the same terms as Perl itself.
 worthmine E<lt>worthmine@cpan.orgE<gt>
 
 =cut
-

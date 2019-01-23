@@ -1,8 +1,4 @@
 [![Build Status](https://travis-ci.com/worthmine/Date-Cutoff-JP.svg?branch=master)](https://travis-ci.com/worthmine/Date-Cutoff-JP)
-<div>
-    <a href="https://travis-ci.com/worthmine/Date-Cutoff-JP"><img src="https://travis-ci.com/worthmine/Date-Cutoff-JP.svg?branch=master"></a>
-</div>
-
 # NAME
 
 Date::CutOff::JP - Get the day cutoff and payday for in Japanese timezone
@@ -18,7 +14,22 @@ Date::CutOff::JP - Get the day cutoff and payday for in Japanese timezone
 # DESCRIPTION
 
 Date::CutOff::JP provides how to calculate the day cutoff and the payday from Japanese calender.
+
 you can calculate the weekday for cutoff and paying without holiday in Japan.
+
+## Methods
+
+### cutoff
+
+get/set the day cutoff in every months. 0 means the end of the month.
+
+### payday
+
+get/set the payday in every months. 0 means the end of the month.
+
+### late
+
+get/set the lateness. 0 means the cutoff and payday is at same month.
 
 # BUGS
 

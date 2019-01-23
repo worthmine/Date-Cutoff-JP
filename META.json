@@ -42,8 +42,8 @@
       },
       "runtime" : {
          "requires" : {
-            "Class::Accessor" : "0",
             "Date::Japanese::Holiday" : "0",
+            "Moose" : "0",
             "Time::Piece" : "0",
             "Time::Seconds" : "0",
             "perl" : "5.008001"
