@@ -22,9 +22,9 @@ use Time::Piece;
 my $tp = Time::Piece->new();
 
 use Moose;
-has cutoff => ( is => 'rw', isa => 'Num', default => 0 );
-has payday => ( is => 'rw', isa => 'Num', default => 0 );
-has late    => ( is => 'rw', isa => 'Num', default => 1 );
+has cutoff => ( is => 'rw', isa => 'Int', default => 0 );
+has payday => ( is => 'rw', isa => 'Int', default => 0 );
+has late    => ( is => 'rw', isa => 'Int', default => 1 );
 
 before 'cutoff' => sub {
     my $self = shift;
