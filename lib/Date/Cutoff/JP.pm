@@ -1,6 +1,6 @@
 package Date::Weekend::JP;
 
-our $VERSION = "0.02";
+our $VERSION = "0.03";
 
 use base 'Date::Japanese::Holiday';
 
@@ -14,7 +14,7 @@ use 5.008001;
 use strict;
 use warnings;
 
-our $VERSION = "0.02";
+our $VERSION = "0.03";
 
 use Carp;
 use Time::Seconds;
@@ -171,7 +171,8 @@ Because of dependency: L<Date::Japanese::Holiday>
 
 =head1 SEE ALSO
  
-L<Date::Simple>, L<Date::Japanese::Holiday>
+L<Date::Simple>, L<Date::Japanese::Holiday>,
+L<日本の祝日YAML|https://github.com/holiday-jp/holiday_jp/blob/master/holidays.yml>
  
 =head1 LICENSE
 

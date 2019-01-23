@@ -65,7 +65,8 @@ Because of dependency: [Date::Japanese::Holiday](https://metacpan.org/pod/Date::
 
 # SEE ALSO
 
-[Date::Simple](https://metacpan.org/pod/Date::Simple), [Date::Japanese::Holiday](https://metacpan.org/pod/Date::Japanese::Holiday)
+[Date::Simple](https://metacpan.org/pod/Date::Simple), [Date::Japanese::Holiday](https://metacpan.org/pod/Date::Japanese::Holiday),
+[日本の祝日YAML](https://github.com/holiday-jp/holiday_jp/blob/master/holidays.yml)
 
 # LICENSE
 
