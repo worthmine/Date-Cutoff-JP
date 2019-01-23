@@ -114,20 +114,45 @@ Date::CutOff::JP provides how to calculate the day cutoff and the payday from Ja
 
 you can calculate the weekday for cutoff and paying without holiday in Japan.
  
-=head2 Methods
+=head2 Accessor Methods
  
-=head3 cutoff
+=head3 cutoff()
  
 get/set the day cutoff in every months. 0 means the end of the month.
 
-=head3 payday
+=head3 payday()
  
 get/set the payday in every months. 0 means the end of the month.
  
-=head3 late
+=head3 late()
  
 get/set the lateness. 0 means the cutoff and payday is at same month.
 
+The all you can set is Int of [ 0 .. 2 ] 3 or more returns error.
+ 
+=head2 Method
+
+=head3 calc_date($date)
+ 
+returns hash value with keys below:
+
+=over
+ 
+ 
+=item cutoff
+
+The latest cutoff after $date.
+ 
+=item payday
+ 
+The latest payday after $date.
+
+=item is_over ( maybe bad key name )
+ 
+Is or not that the cutoff is pending until next month.
+
+=back
+ 
 =head1 BUGS
 
 Because of dependency: L<Date::Japanese::Holiday>
@@ -143,6 +168,10 @@ Because of dependency: L<Date::Japanese::Holiday>
 1st of May is special holiday especially 2019 but this module doesn't support it yet.
  
 =back
+
+=head1 SEE ALSO
+ 
+L<Date::Simple>, L<Date::Japanese::Holiday>
  
 =head1 LICENSE
 
@@ -154,5 +183,5 @@ it under the same terms as Perl itself.
 =head1 AUTHOR
 
 worthmine E<lt>worthmine@cpan.orgE<gt>
-
+ 
 =cut
