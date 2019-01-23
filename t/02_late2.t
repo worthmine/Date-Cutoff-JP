@@ -3,8 +3,8 @@ use Test::More 0.98 tests => 24;
 
 use lib './lib';
 
-use Date::CutOff::JP;
-my $dco = Date::CutOff::JP->new({ cutoff => 0, late => 2, payday => 0 });
+use Date::Cutoff::JP;
+my $dco = Date::Cutoff::JP->new({ cutoff => 0, late => 2, payday => 0 });
 
 my %calc = $dco->calc_date('2019-01-01');
 is $calc{cutoff}, '2019-01-31', "cutoff is ok for Jan.";

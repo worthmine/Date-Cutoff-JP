@@ -12,7 +12,7 @@
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
       "version" : 2
    },
-   "name" : "Date-CutOff-JP",
+   "name" : "Date-Cutoff-JP",
    "no_index" : {
       "directory" : [
          "t",
@@ -42,6 +42,8 @@
       },
       "runtime" : {
          "requires" : {
+            "Class::Accessor" : "0",
+            "Date::Japanese::Holiday" : "0",
             "Time::Piece" : "0",
             "Time::Seconds" : "0",
             "perl" : "5.008001"
@@ -54,6 +56,17 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/worthmine/Date-Cutoff-JP/issues"
+      },
+      "homepage" : "https://github.com/worthmine/Date-Cutoff-JP",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/worthmine/Date-Cutoff-JP.git",
+         "web" : "https://github.com/worthmine/Date-Cutoff-JP"
+      }
+   },
    "version" : "0.01",
    "x_serialization_backend" : "JSON::PP version 4.00",
    "x_static_install" : 1

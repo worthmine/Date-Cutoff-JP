@@ -9,7 +9,7 @@ sub is_weekend {
     return $self->is_holiday || $self->day_of_week == 6;
 }
 
-package Date::CutOff::JP;
+package Date::Cutoff::JP;
 use 5.008001;
 use strict;
 use warnings;

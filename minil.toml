@@ -1,4 +1,4 @@
-name = "Date-CutOff-JP"
+name = "Date-Cutoff-JP"
 badges = ["travis-ci.com"]
 module_maker="ModuleBuildTiny"
 static_install = "auto"

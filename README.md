@@ -1,11 +1,11 @@
-
+[![Build Status](https://travis-ci.com/worthmine/Date-Cutoff-JP.svg?branch=master)](https://travis-ci.com/worthmine/Date-Cutoff-JP)
 # NAME
 
 Date::CutOff::JP - Get the day cutoff and payday for in Japanese timezone
 
 # SYNOPSIS
 
-       use Date::CutOff::JP;
+    use Date::CutOff::JP;
     my $dco = Date::CutOff::JP->new({ cutoff => 0, late => 1, payday => 0 });
     my %calculated = $dco->calc_date('2019-01-01');
     print $calculated{'cutoff'}; # '2019-01-31'
