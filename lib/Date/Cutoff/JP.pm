@@ -67,6 +67,8 @@ __END__
 
 =encoding utf-8
 
+=for html <a href="https://travis-ci.com/worthmine/Date-Cutoff-JP"><img src="https://travis-ci.com/worthmine/Date-Cutoff-JP.svg?branch=master"></a>
+ 
 =head1 NAME
 
 Date::CutOff::JP - Get the day cutoff and payday for in Japanese timezone

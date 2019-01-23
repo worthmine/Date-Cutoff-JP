@@ -1,4 +1,8 @@
 [![Build Status](https://travis-ci.com/worthmine/Date-Cutoff-JP.svg?branch=master)](https://travis-ci.com/worthmine/Date-Cutoff-JP)
+<div>
+    <a href="https://travis-ci.com/worthmine/Date-Cutoff-JP"><img src="https://travis-ci.com/worthmine/Date-Cutoff-JP.svg?branch=master"></a>
+</div>
+
 # NAME
 
 Date::CutOff::JP - Get the day cutoff and payday for in Japanese timezone
