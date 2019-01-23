@@ -1,5 +1,5 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "Get the day cutoff and payday for in Japanese timezone",
    "author" : [
       "worthmine <worthmine@cpan.org>"
    ],
@@ -42,6 +42,8 @@
       },
       "runtime" : {
          "requires" : {
+            "Time::Piece" : "0",
+            "Time::Seconds" : "0",
             "perl" : "5.008001"
          }
       },

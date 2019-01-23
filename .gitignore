@@ -29,3 +29,6 @@ cover_db/
 MYMETA.*
 
 /Date-CutOff-JP-*
+/.build
+!Build/
+!META.json
