@@ -1,6 +1,6 @@
 package Date::Weekend::JP;
 
-our $VERSION = "0.01";
+our $VERSION = "0.02";
 
 use base 'Date::Japanese::Holiday';
 
@@ -14,7 +14,7 @@ use 5.008001;
 use strict;
 use warnings;
 
-our $VERSION = "0.01";
+our $VERSION = "0.02";
 
 use Carp;
 use Time::Seconds;

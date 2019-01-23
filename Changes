@@ -2,6 +2,9 @@ Revision history for Perl extension Date-CutOff-JP
 
 {{$NEXT}}
 
+0.02 2019-01-23T14:10:03Z
+    - fixed the documentation
+
 0.01 2019-01-23T13:42:38Z
 
     - original version
