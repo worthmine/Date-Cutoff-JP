@@ -3,7 +3,7 @@ use 5.008001;
 use strict;
 use warnings;
 
-our $VERSION = "0.03";
+our $VERSION = "0.04";
 
 use Carp;
 use Time::Seconds;
@@ -154,23 +154,10 @@ Is or not that the cutoff is pending until next month.
  
 =head1 BUGS
 
-Because of dependency: L<Date::Japanese::Holiday>
- 
-=over
- 
-=item 山の日
-
-11th of Aug is a holiday as '山の日' since 2016 but this module doesn't support it yet.
-
-=item 天皇即位の日
-
-1st of May is special holiday especially 2019 but this module doesn't support it yet.
- 
-=back
-
 =head1 SEE ALSO
  
-L<Date::Simple>, L<Date::Japanese::Holiday>,
+L<Calendar::Japanese::Holiday>,L<Date::DayOfWeek>
+ 
 L<日本の祝日YAML|https://github.com/holiday-jp/holiday_jp/blob/master/holidays.yml>
  
 =head1 LICENSE
