@@ -15,9 +15,4 @@ is eval{ $dco->payday(32) }, undef, "Fail to assign too big payday";
 is eval{ $dco->late(-1) }, undef, "Fail to assign too small lateness";
 is eval{ $dco->late(4) }, undef, "Fail to assign too big lateness";
 
-use Calendar::Japanese::Holiday;
-
-note(isHoliday(2019, 0+'02',11,1));
-
 done_testing;
-
