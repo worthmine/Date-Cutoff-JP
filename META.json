@@ -42,7 +42,7 @@
       },
       "runtime" : {
          "requires" : {
-            "Date::Japanese::Holiday" : "0",
+            "Calendar::Japanese::Holiday" : "0",
             "Moose" : "0",
             "Time::Piece" : "0",
             "Time::Seconds" : "0",
