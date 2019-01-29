@@ -68,7 +68,7 @@
          "web" : "https://github.com/worthmine/Date-Cutoff-JP"
       }
    },
-   "version" : "0.04",
+   "version" : "0.05",
    "x_serialization_backend" : "JSON::PP version 4.00",
    "x_static_install" : 1
 }
