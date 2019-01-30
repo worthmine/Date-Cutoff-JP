@@ -22,7 +22,7 @@ before 'cutoff' => sub {
     my $self = shift;
     my $value = shift;
     return super() unless defined $value;
-    croak "unvalid cutoff was set: $value" if $value < 0 or 31 < $value;
+    croak "unvalid cutoff was set: $value" if $value < 0 or 28 < $value;
     return super();
 };
 
@@ -30,7 +30,7 @@ before 'payday' => sub {
     my $self = shift;
     my $value = shift;
     return super() unless defined $value;
-    croak "unvalid payday was set: $value" if $value < 0 or 31 < $value;
+    croak "unvalid payday was set: $value" if $value < 0 or 28 < $value;
     croak "payday must be after cuttoff" if $value < $self->cutoff and $self->late == 0;
     return super();
 };
@@ -109,20 +109,30 @@ Date::CutOff::JP - Get the day cutoff and payday for in Japanese timezone
 
 =head1 DESCRIPTION
 
-Date::CutOff::JP provides how to calculate the day cutoff and the payday from Japanese calender.
+Date::CutOff::JP provides how to calculate the day cutoff and the payday from Japanese calendar.
 
-you can calculate the weekday for cutoff and paying without holiday in Japan.
+You can calculate the weekday for cutoff and paying without holidays in Japan.
+ 
+=head1 Constructor
+
+=head3 new({ [cutoff => $day], [payday => $day], [late => 0||1||2] })
+ 
+You may omit parameters. defaults are { cutoff => 0, payday => 0, late => 1 }
  
 =head2 Accessor Methods
  
 =head3 cutoff()
  
 get/set the day cutoff in every months. 0 means the end of the month.
+ 
+B<caution> Int over 28 is denied
 
 =head3 payday()
  
 get/set the payday in every months. 0 means the end of the month.
  
+B<caution> Int over 28 is denied
+
 =head3 late()
  
 get/set the lateness. 0 means the cutoff and payday is at same month.
