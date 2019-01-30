@@ -47,7 +47,7 @@ The all you can set is Int of \[ 0 .. 2 \] 3 or more returns error.
 
 ### calc\_date(\[$date\])
 
-You may omit the parameter. defaults are TODAY.
+You may omit the parameter. default is TODAY.
 
 returns hash value with keys below:
 

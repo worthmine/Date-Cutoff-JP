@@ -43,8 +43,8 @@ before 'late' => sub {
     my $value = shift;
     return super() unless defined $value;
     croak "unvalid lateness was set: $value" if $value < 0 or 2 < $value;
-     croak "payday is before cuttoff in same month"
-    if $self->late == $value and $self->payday <= $self->cutoff;
+    my( $cutoff, $payday ) = ($self->cutoff, $self->payday);
+    croak "payday is before cuttoff in same month" if $value == 0 and $payday <= $cutoff;
     return super();
 };
 
@@ -147,7 +147,7 @@ The all you can set is Int of [ 0 .. 2 ] 3 or more returns error.
 
 =head3 calc_date([$date])
 
-You may omit the parameter. defaults are TODAY.
+You may omit the parameter. default is TODAY.
  
 returns hash value with keys below:
 
