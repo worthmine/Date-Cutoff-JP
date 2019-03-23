@@ -16,7 +16,7 @@ use Moose;
 
 has cutoff => ( is => 'rw', isa => 'Int', default => 0 );
 has payday => ( is => 'rw', isa => 'Int', default => 0 );
-has late    => ( is => 'rw', isa => 'Int', default => 1 );
+has late   => ( is => 'rw', isa => 'Int', default => 1 );
 
 around 'cutoff' => sub {
     my $orig = shift;
