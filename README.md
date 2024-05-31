@@ -67,7 +67,7 @@ returns hash value with keys below:
 
 # SEE ALSO
 
-[Calendar::Japanese::Holiday](https://metacpan.org/pod/Calendar::Japanese::Holiday),[Date::DayOfWeek](https://metacpan.org/pod/Date::DayOfWeek)
+[Calendar::Japanese::Holiday](https://metacpan.org/pod/Calendar%3A%3AJapanese%3A%3AHoliday),[Date::DayOfWeek](https://metacpan.org/pod/Date%3A%3ADayOfWeek)
 
 [日本の祝日YAML](https://github.com/holiday-jp/holiday_jp/blob/master/holidays.yml)
 
