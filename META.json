@@ -45,10 +45,8 @@
             "Calendar::Japanese::Holiday" : "0.07",
             "Date::DayOfWeek" : "0",
             "Moo" : "2.005005",
-            "Time::Piece" : "0",
-            "Time::Seconds" : "0",
-            "Types::Standard" : "0",
-            "namespace::clean" : "0",
+            "Types::Standard" : "2.004000",
+            "namespace::clean" : "0.27",
             "perl" : "5.008001"
          }
       },
@@ -70,7 +68,10 @@
          "web" : "https://github.com/worthmine/Date-Cutoff-JP"
       }
    },
-   "version" : "0.07",
+   "version" : "0.08",
+   "x_contributors" : [
+      "Yuki Yoshida(worthmine) <2944869+worthmine@users.noreply.github.com>"
+   ],
    "x_serialization_backend" : "JSON::PP version 4.16",
    "x_static_install" : 1
 }

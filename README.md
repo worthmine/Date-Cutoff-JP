@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/worthmine/Date-Cutoff-JP.svg?branch=master)](https://travis-ci.com/worthmine/Date-Cutoff-JP) [![MetaCPAN Release](https://badge.fury.io/pl/Date-Cutoff-JP.svg)](https://metacpan.org/release/Date-Cutoff-JP)
+[![Build Status](https://travis-ci.com/worthmine/Date-Cutoff-JP.svg?branch=main)](https://travis-ci.com/worthmine/Date-Cutoff-JP) [![MetaCPAN Release](https://badge.fury.io/pl/Date-Cutoff-JP.svg)](https://metacpan.org/release/Date-Cutoff-JP)
 # NAME
 
 Date::CutOff::JP - Get the day cutoff and payday for in Japanese timezone
